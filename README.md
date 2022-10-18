@@ -57,3 +57,37 @@ python3 manage.py runserver
 python3 manage.py runserver
 ```) по ссылке ```/redoc/```
 
+**Пример API-запросов**
+Получение постов с 2 по 4
+
+*Request:*
+```GET /api/v1/posts/?limit=2&offset=4```
+
+*Respond:*
+```
+200 OK
+{
+    "count": 15,
+    "next": "http://127.0.0.1:8000/api/v1/posts/?limit=2&offset=6",
+    "previous": "http://127.0.0.1:8000/api/v1/posts/?limit=2&offset=2",
+    "results": [
+        {
+            "id": 5,
+            "author": "Автор поста",
+            "text": "Текст поста",
+            "pub_date": "2022-10-16T08:55:27.883702Z",
+            "image": null,
+            "group": null
+        },
+        {
+            "id": 6,
+            "author": "Автор поста",
+            "text": "Текст поста",
+            "pub_date": "2022-10-16T10:51:35.585324Z",
+            "image": null,
+            "group": null
+        }
+    ]
+}
+```
+

@@ -57,7 +57,7 @@ python3 manage.py runserver
 python3 manage.py runserver
 ```) по ссылке ```/redoc/```
 
-**Пример API-запросов**
+**Пример API-запросов**<br/>
 Получение постов с 2 по 4
 
 *Request:*
@@ -90,4 +90,32 @@ python3 manage.py runserver
     ]
 }
 ```
+<br/>
+Создание комментария
 
+*Request:*
+```POST /api/v1/posts/5/comments/
+
+headers:
+{
+    "content_type": "application/json"
+    "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY4NTAwMTk3LCJqdGkiOiI3MGU3ZDdkYWZkNzE0NWU0YTI1NTNlMzE2N2JkMTE2MSIsInVzZXJfaWQiOjN9.YhudB1bAYqcKSMCfhGOV_6c-UvxFIQG-bj0uYYePA9A"
+}
+
+data:
+{
+  "text": "Текст комментария"
+}
+```
+
+*Respond:*
+```
+201 Created
+{
+"id": 0,
+"author": "Автор комментария",
+"text": "Текст комментария",
+"created": "2019-08-24T14:15:22Z",
+"post": 5
+}
+```

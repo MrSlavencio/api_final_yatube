@@ -50,6 +50,19 @@ python3 manage.py migrate
 python3 manage.py runserver
 ```
 
+## Используемые библиотеки
+
+В проекте используются следующие зависимости:
+* Django==2.2.16
+* pytest==6.2.4
+* pytest-pythonpath==0.7.3
+* pytest-django==4.4.0
+* djangorestframework==3.12.4
+* djangorestframework-simplejwt==4.7.2
+* Pillow==8.3.1
+* PyJWT==2.1.0
+* requests==2.26.0
+* djangorestframework-simplejwt==4.7.2
 
 ## Rest-API
 
@@ -120,3 +133,8 @@ data:
     "post": 5
 }
 ```
+## Об авторе
+
+Автор проекта - **Кобзев Вячеслав**, студент когорты 44 факультета Бэкенд разработки Яндекс-практикума.</br>
+Контакты для связи: </br>
+[*telegram*](https://t.me/mrslavencio "MrSlavencio")
